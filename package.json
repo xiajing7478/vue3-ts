@@ -10,7 +10,9 @@
 		"lint:create": "eslint --init",
 		"lint": "eslint \"src/**/*.{js,vue,ts}\" --fix",
 		"prettier-format": "prettier --config .prettierrc.cjs \"src/**/*.{vue,js,ts}\" --write",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"build:pre": "vue-tsc --noEmit && vite build --mode staging",
+		"build:pro": "vue-tsc --noEmit && vite build --mode production"
 	},
 	"dependencies": {
 		"vue": "^3.3.11"
